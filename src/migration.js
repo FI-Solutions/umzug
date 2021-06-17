@@ -33,7 +33,7 @@ module.exports = class Migration {
    */
   constructor (path, options) {
     this.path = _path.resolve(path);
-    this.file = _path.basename(this.path);
+    this.file = _path.basename(this.path, _path.extname(this.path));
     this.options = options;
   }
 
